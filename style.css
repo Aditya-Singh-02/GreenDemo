@@ -12,7 +12,6 @@ body {
 }
 
 /* --- Shared Components --- */
-
 /* Navigation Bar */
 .navbar-brand {
     font-size: 1.5rem;
@@ -24,18 +23,57 @@ body {
     color: #198754 !important;
 }
 
+/* Navbar User Profile */
+#navbar-profile {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s;
+}
+#navbar-profile:hover {
+    background-color: #e0e0e0;
+}
+#navbar-profile i {
+    font-size: 1.2rem;
+    color: #198754;
+}
+
 /* Footer */
 footer {
     border-top: 1px solid #e9ecef;
 }
 
+/* --- Page Sections --- */
 /* Hero Section */
 .hero-section {
     background: linear-gradient(rgba(29, 132, 82, 0.85), rgba(29, 132, 82, 0.85)), url('https://images.unsplash.com/photo-1593113598332-cd288d6494a4?q=80&w=2070') no-repeat center center;
     background-size: cover;
     padding: 120px 0;
     animation: fadeIn 1.5s ease-in-out;
+    
 }
+header.hero-section {
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1050&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+header.hero-section:before {
+  content:"";
+  background: rgba(37, 109, 90, .76);
+  position: absolute; left:0; top:0; right:0; bottom:0;
+  z-index: 0;
+}
+header.hero-section .container,
+header.hero-section .content,
+header.hero-section .btn,
+header.hero-section * {
+  position: relative;           /* ensure z-index applies if needed */
+  z-index: 1;                   /* content sits above overlay */
+}
+
 
 /* Card styles */
 .card {
@@ -63,6 +101,35 @@ footer {
     background-color: #198754;
     color: #fff;
 }
+
+/* User Profile Section */
+#user-profile .points-display {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: inline-block;
+}
+
+/* Reward Cards Section */
+.reward-card {
+    border: 1px solid #e9ecef;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.reward-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.reward-card img {
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+}
+.reward-card .btn {
+    width: 90%;
+}
+
 
 /* Impact Section */
 .impact-card {
@@ -134,3 +201,19 @@ section.visible, header.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
+.amazon img{
+    width: 100%;
+}
+
+img.bg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* similar to background-size: cover */
+    display: block;
+}
+
+.schedule-btn{
+    margin-top: 7px;
+}
+
