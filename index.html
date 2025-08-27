@@ -3,212 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReSource Chain - Smart Exchange & Donation Platform</title>
+    <title>Donate & Impact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-success" href="#home">
-                <i class="fas fa-recycle me-2"></i>ReSource Chain
-            </a>
+            <a class="navbar-brand fw-bold text-success" href="#">RePurpose</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tracker">Tracker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#donate-form">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#impact-stats">Impact</a></li>
                     <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <!-- User Profile in Navbar -->
+                    <li class="nav-item ms-lg-3">
+                         <div id="navbar-profile" class="d-flex align-items-center">
+                            <i class="bi bi-person-circle me-2"></i>
+                            <span class="fw-bold" id="navbar-user-points">0 Points</span>
+                        </div>
+                    </li>
                 </ul>
-                <button class="btn btn-success ms-lg-3" id="connectWalletBtn"><i class="fas fa-wallet me-2"></i>Connect Wallet</button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="hero-section text-white text-center">
+    <header id="hero" class="hero-section text-white text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Give Your Gadgets & Garments a Second Life</h1>
-            <p class="lead my-4">Responsibly recycle e-waste and donate clothing. Earn rewards and make a real impact, right from your doorstep.</p>
-            <a href="#donate" class="btn btn-light btn-lg fw-bold">Schedule a Free Pickup</a>
+            <!-- <img src="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="bg">
+            <h1 class="display-4 fw-bold">Turn Clutter Into Change</h1> -->
+            <p class="lead my-3">Connecting communities to build a sustainable and equitable future.</p>
+            <a href="#donate-form" class="btn btn-light btn-lg fw-bold">Donate Now</a>
         </div>
     </header>
-    
-    <!-- About Section (Problem & Impact) -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Our Mission: Bridging Waste and Need</h2>
-                <p class="text-muted">Connecting communities to build a sustainable and equitable future.</p>
-            </div>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Problem Statement Section -->
+        <section id="problem" class="text-center mb-5">
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm"><div class="card-body text-center p-4">
-                        <i class="fas fa-microchip fa-3x text-danger mb-3"></i>
-                        <h4 class="card-title">E-Waste Mismanagement</h4>
-                        <p class="card-text">Old electronics often end up in landfills, wasting valuable resources and causing environmental harm.</p>
-                    </div></div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h5 class="text-danger">E-Waste Crisis</h5>
+                        <p>Old electronics often end up in landfills, wasting valuable resources and causing environmental harm.</p>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm"><div class="card-body text-center p-4">
-                        <i class="fas fa-shirt fa-3x text-primary mb-3"></i>
-                        <h4 class="card-title">Unused Clothing</h4>
-                        <p class="card-text">Millions of wearable garments lie unused, while many in need lack proper clothing, especially in winter.</p>
-                    </div></div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h5 class="text-primary">Clothing Gap</h5>
+                        <p>Millions of wearable garments lie unused, while many in need lack proper clothing, especially in winter.</p>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm"><div class="card-body text-center p-4">
-                        <i class="fas fa-link-slash fa-3x text-warning mb-3"></i>
-                        <h4 class="card-title">The Disconnect</h4>
-                        <p class="card-text">A gap exists between those wanting to discard items and the organizations that can give them a new life.</p>
-                    </div></div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h5 class="text-warning">Donation Inefficiency</h5>
+                        <p>A gap exists between those wanting to discard items and the organizations that can give them a new life.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">A Simple Process for a Big Impact</h2>
-                <p class="text-muted">In just three steps, you can clear your space and change a life.</p>
-            </div>
-            <div class="row text-center align-items-center">
-                <div class="col-md-4 mb-5">
-                    <div class="p-4">
-                        <i class="fas fa-list-check fa-4x text-success mb-4"></i>
-                        <h3 class="fw-bold">1. List Your Items</h3>
-                        <p class="lead">Quickly tell us what you want to give away using our simple form.</p>
-                    </div>
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-5">
+            <h2 class="text-center mb-5 fw-bold">Three Steps to Make a Difference</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3>1. Schedule</h3>
+                    <p>Quickly tell us what you want to give away using our simple form.</p>
                 </div>
-                <div class="col-md-4 mb-5">
-                    <div class="p-4">
-                        <i class="fas fa-calendar-check fa-4x text-success mb-4"></i>
-                        <h3 class="fw-bold">2. Schedule Pickup</h3>
-                        <p class="lead">Choose a convenient time for a free, contactless doorstep collection.</p>
-                    </div>
+                <div class="col-md-4">
+                    <h3>2. We Collect</h3>
+                    <p>Choose a convenient time for a free, contactless doorstep collection.</p>
                 </div>
-                <div class="col-md-4 mb-5">
-                    <div class="p-4">
-                        <i class="fas fa-award fa-4x text-success mb-4"></i>
-                        <h3 class="fw-bold">3. Track & Get Rewards</h3>
-                        <p class="lead">See the impact of your donation and earn points from our partners.</p>
-                    </div>
+                <div class="col-md-4">
+                    <h3>3. Track Impact</h3>
+                    <p>See the impact of your donation and earn points from our partners.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Start Your Donation Form Section -->
-    <section id="donate" class="py-5">
-        <div class="container">
+        <!-- Donation Form Section -->
+        <section id="donate-form" class="py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="text-center mb-4">
-                        <h2 class="fw-bold">Start Your Donation</h2>
-                        <p class="text-muted">Select a category and fill in the details to schedule your pickup.</p>
-                    </div>
                     <div class="donation-form-container p-4 p-md-5">
-                        <ul class="nav nav-pills nav-fill mb-4" id="donationTabs" role="tablist">
-                            <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#ewaste-form" type="button"><i class="fas fa-robot me-2"></i>Recycle E-Waste</button></li>
-                            <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#clothing-form" type="button"><i class="fas fa-shirt me-2"></i>Donate Clothing</button></li>
+                        <h2 class="text-center fw-bold mb-4">Schedule Your Free Pickup</h2>
+                        <ul class="nav nav-pills nav-fill mb-4" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-electronics-tab" data-bs-toggle="pill" data-bs-target="#pills-electronics" type="button">Electronics</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-garments-tab" data-bs-toggle="pill" data-bs-target="#pills-garments" type="button">Garments</button>
+                            </li>
                         </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="ewaste-form">
-                                <form onsubmit="event.preventDefault(); alert('Pickup Scheduled! Thank you for making an impact.');">
-                                    <div class="mb-3"><select class="form-select" required><option selected disabled value="">Select E-Waste Category...</option><option>Smartphones</option><option>Laptops</option><option>Other</option></select></div>
-                                    <div class="mb-3"><input type="text" class="form-control" placeholder="Brand & Model" required></div>
-                                    <h5 class="mt-4 mb-3">Pickup Details</h5>
-                                    <div class="row"><div class="col-md-6 mb-3"><input type="text" class="form-control" placeholder="Your Name" required></div><div class="col-md-6 mb-3"><input type="text" class="form-control" placeholder="Pickup Address" required></div></div>
-                                    <div class="mb-3"><input type="datetime-local" class="form-control" required></div>
-                                    <button type="submit" class="btn btn-success w-100 mt-3">Confirm & Schedule Pickup</button>
+                        <div class="tab-content" id="pills-tabContent">
+                            <!-- Electronics Form -->
+                            <div class="tab-pane fade show active" id="pills-electronics" role="tabpanel">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Type of E-Waste</label>
+                                        <input type="text" class="form-control" placeholder="e.g., Old Laptops, Phones">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Pickup Date</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                    <!-- Address Section -->
+                                    <div class="mb-3">
+                                    <label for="address" class="form-label">Pickup Address</label>
+                                    <textarea id="address" name="address" class="form-control" rows="3"
+                                                autocomplete="street-address" maxlength="300" required
+                                                placeholder="House/Flat, Street, Locality, Landmark"></textarea>
+                                    </div>
+
+                                    <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <label for="postal-code" class="form-label">ZIP or postal code (optional)</label>
+                                        <input id="postal-code" name="postal-code" class="form-control"
+                                            autocomplete="postal-code" maxlength="20" placeholder="e.g., 110001">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="country" class="form-label">Country or region</label>
+                                        <select id="country" name="country" class="form-select" autocomplete="country" required>
+                                        <option value="" selected disabled>Select</option>
+                                        <option value="IN">India</option>
+                                        <option value="US">United States</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="AU">Australia</option>
+                                        <!-- Add more as needed -->
+                                        </select>
+                                    </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-success w-100 schedule-btn">Schedule E-Waste Pickup</button>
                                 </form>
                             </div>
-                            <div class="tab-pane fade" id="clothing-form">
-                                 <form onsubmit="event.preventDefault(); alert('Pickup Scheduled! Thank you for making an impact.');">
-                                    <div class="mb-3"><select class="form-select" required><option selected disabled value="">Select Clothing Type...</option><option>Winter Wear</option><option>General Apparel</option><option>Other</option></select></div>
-                                    <div class="mb-3"><input type="number" class="form-control" placeholder="Estimated Quantity" required></div>
-                                    <h5 class="mt-4 mb-3">Pickup Details</h5>
-                                    <div class="row"><div class="col-md-6 mb-3"><input type="text" class="form-control" placeholder="Your Name" required></div><div class="col-md-6 mb-3"><input type="text" class="form-control" placeholder="Pickup Address" required></div></div>
-                                    <div class="mb-3"><input type="datetime-local" class="form-control" required></div>
-                                    <button type="submit" class="btn btn-success w-100 mt-3">Confirm & Schedule Pickup</button>
+                            <!-- Garments Form -->
+                            <div class="tab-pane fade" id="pills-garments" role="tabpanel">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Type of Garments</label>
+                                        <input type="text" class="form-control" placeholder="e.g., Winter Coats, T-Shirts">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Pickup Date</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                    <!-- Address Section -->
+                                    <div class="mb-3">
+                                    <label for="address" class="form-label">Pickup Address</label>
+                                    <textarea id="address" name="address" class="form-control" rows="3"
+                                                autocomplete="street-address" maxlength="300" required
+                                                placeholder="House/Flat, Street, Locality, Landmark"></textarea>
+                                    </div>
+
+                                    <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <label for="postal-code" class="form-label">ZIP or postal code (optional)</label>
+                                        <input id="postal-code" name="postal-code" class="form-control"
+                                            autocomplete="postal-code" maxlength="20" placeholder="e.g., 110001">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="country" class="form-label">Country or region</label>
+                                        <select id="country" name="country" class="form-select" autocomplete="country" required>
+                                        <option value="" selected disabled>Select</option>
+                                        <option value="IN">India</option>
+                                        <option value="US">United States</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="AU">Australia</option>
+                                        <!-- Add more as needed -->
+                                        </select>
+                                    </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-success w-100">Schedule Garment Pickup</button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Web3 Tracker Section -->
-    <section id="tracker" class="py-5 bg-dark text-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Live Donation & Recycling Ledger</h2>
-                <p class="lead">Trust Through Transparency: Our Web3 Integration.</p>
+        <!-- User Profile & Points -->
+        <!-- <section id="user-profile" class="py-5 bg-light rounded-3 text-center">
+            <div class="container">
+                <h2 class="fw-bold">Your Rewards Profile</h2>
+                <p class="lead text-muted">Thank you for your contributions!</p>
+                <div class="points-display mt-4">
+                    <h3 class="fw-bold">Your Current Point Balance:</h3>
+                    <p id="user-points" class="display-4 fw-bold text-success">0</p>
+                </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div id="donation-tracker" class="p-4 rounded-3">
-                        <h5 class="text-success text-center mb-3">Live Network Activity</h5>
-                        <div id="transaction-feed" class="text-start"></div>
-                        <div class="text-center">
-                            <button class="btn btn-outline-success mt-4" id="verifyBtn">Verify My Last Donation</button>
+        </section> -->
+
+        <!-- Redeem Points Section -->
+        <section id="redeem-rewards" class="py-5">
+            <h2 class="text-center mb-5 fw-bold">Redeem Your Points</h2>
+            <div class="row">
+                <!-- Flipkart Card -->
+                <div class="col-md-6 col-lg-4 mb-4 giftcard">
+                    <div class="reward-card card h-100 text-center">
+                        <img src="https://e2zstore.com/wp-content/uploads/2019/01/Flipkart-gift-cards.jpg" class="card-img-top p-4" alt="Flipkart Gift Card">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Flipkart Gift Card</h5>
+                            <p class="card-text">Redeem for a ₹500 voucher.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3">
+                            <button class="btn btn-primary redeem-btn" data-cost="500">Redeem for 500 Points</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Amazon Card -->
+                <div class="col-md-6 col-lg-4 mb-4 mazon">
+                    <div class="reward-card card h-100 text-center">
+                        <img src="https://www.figma.com/community/resource/a523d52c-90a5-4e68-9b4f-9c5791f9b0a2/thumbnail" class="card-img-top p-4" alt="Amazon Gift Card">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Amazon Gift Card</h5>
+                            <p class="card-text">Redeem for a ₹1000 voucher.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3">
+                             <button class="btn btn-primary redeem-btn" data-cost="1000">Redeem for 1000 Points</button>
+                        </div>
+                    </div>
+                </div>
+                 <!-- More Rewards Card -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="reward-card card h-100 text-center">
+                        <img src="https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Entertainment/Gift%20and%20Value%20Cards/Images/183683_0_x3sohc.png?tr=w-600" class="card-img-top p-4" alt="More Rewards">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">More Rewards Coming Soon</h5>
+                            <p class="card-text">Check back later for more ways to redeem your points!</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3">
+                             <button class="btn btn-secondary" disabled>Stay Tuned</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Collective Impact Section -->
-    <section id="impact-stats" class="py-5 text-center">
-        <div class="container">
-            <h2 class="fw-bold">Our Collective Impact</h2>
-            <p class="text-muted mb-5">Together, we are making a measurable difference for the planet and its people.</p>
+        <!-- Impact Stats Section -->
+        <section id="impact-stats" class="py-5 text-center">
+             <h2 class="text-center mb-5 fw-bold">Our Collective Impact</h2>
             <div class="row">
-                <div class="col-md-4 mb-4"><div class="impact-card"><i class="fas fa-box-open fa-3x text-success mb-3"></i><h3 class="impact-number" data-target="15800">0</h3><p>Garments Donated</p></div></div>
-                <div class="col-md-4 mb-4"><div class="impact-card"><i class="fas fa-weight-hanging fa-3x text-success mb-3"></i><h3 class="impact-number" data-target="3500">0</h3><p>kg of E-Waste Recycled</p></div></div>
-                <div class="col-md-4 mb-4"><div class="impact-card"><i class="fas fa-people-group fa-3x text-success mb-3"></i><h3 class="impact-number" data-target="7500">0</h3><p>Families Supported</p></div></div>
+                <div class="col-md-4 mb-4">
+                    <div class="impact-card">
+                        <h4>Garments Donated</h4>
+                        <p class="impact-number" data-target="5200">0</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="impact-card">
+                        <h4>kg of E-Waste Recycled</h4>
+                        <p class="impact-number" data-target="1500">0</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="impact-card">
+                        <h4>Families Supported</h4>
+                        <p class="impact-number" data-target="350">0</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Photo Gallery Section -->
-    <section id="gallery" class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Moments of Impact</h2>
-                <p class="text-muted">See our community's contributions in action.</p>
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-5">
+            <h2 class="text-center fw-bold mb-5">Community in Action</h2>
+            <div class="row g-4">
+                <div class="col-md-4"><img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1613&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded gallery-item" alt="Donated clothes"></div>
+                <div class="col-md-4"><img src="https://images.unsplash.com/photo-1614201991207-765637dd6183?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded gallery-item" alt="Recycling e-waste"></div>
+                <div class="col-md-4"><img src="https://images.unsplash.com/photo-1614201756100-1ccde6a6589e?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded gallery-item" alt="Community volunteers"></div>
             </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 mb-4"><img src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?q=80&w=1964" class="gallery-item img-fluid rounded shadow-sm" alt="Donation drive"></div>
-                <div class="col-md-4 col-sm-6 mb-4"><img src="https://images.unsplash.com/photo-1638443883232-18ab7f985541?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3RhY2slMjBvZiUyMGNsb3RoZXN8ZW58MHx8MHx8fDA%3D" class="gallery-item img-fluid rounded shadow-sm" alt="Sorting clothes"></div>
-                <div class="col-md-4 col-sm-6 mb-4"><img src="https://images.unsplash.com/photo-1484863137850-59afcfe05386?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGFwcHklMjBwZXJzb258ZW58MHx8MHx8fDA%3D" class="gallery-item img-fluid rounded shadow-sm" alt="Happy recipient"></div>
-                <div class="col-md-4 col-sm-6 mb-4"><img src="https://images.unsplash.com/photo-1608653206809-e6a8044173b0?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="gallery-item img-fluid rounded shadow-sm" alt="E-waste collection"></div>
-                <div class="col-md-4 col-sm-6 mb-4"><img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dm9sdW50ZWVyc3xlbnwwfHwwfHx8MA%3D%3D" class="gallery-item img-fluid rounded shadow-sm" alt="Volunteers working"></div>
-                <div class="col-md-4 col-sm-6 mb-4"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29tbXVuaXR5JTIwZXZlbnR8ZW58MHx8MHx8fDA%3D" class="gallery-item img-fluid rounded shadow-sm" alt="Community event"></div>
+        </section>
+
+         <!-- Web3 Section -->
+        <section id="web3" class="py-5 bg-dark text-white">
+            <div class="container text-center">
+                <h2 class="fw-bold">Trust Through Transparency</h2>
+                <p class="lead">Our Web3 Integration</p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div id="donation-tracker" class="p-4 my-3 rounded">
+                            <h5 class="text-white">Live Donation Feed</h5>
+                            <div id="transaction-feed" class="text-start mb-3" style="height: 150px; overflow-y: auto;"></div>
+                            <button id="connectWalletBtn" class="btn btn-success me-2">Connect Wallet</button>
+                            <button id="verifyBtn" class="btn btn-outline-light">Verify Your Donation</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="py-4 bg-white">
-        <div class="container text-center"><p class="mb-0">&copy; 2025 ReSource Chain. A Hackathon Project for a Sustainable Future.</p></div>
+    <footer class="text-center py-4">
+        <p>&copy; 2024 RePurpose. All Rights Reserved.</p>
     </footer>
-    
-    <!-- Lightbox Modal -->
-    <div class="modal fade" id="lightboxModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content bg-transparent border-none"><div class="modal-body p-0"><img src="" class="d-block w-100 rounded" id="lightboxImage"></div></div></div></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="lightboxModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <img id="lightboxImage" src="" class="img-fluid" alt="Gallery View">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
